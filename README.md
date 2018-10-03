@@ -1,5 +1,3 @@
-![header](https://www.techyourchance.com/wp-content/uploads/2018/04/Google-Adopted-Kotlin-Android.jpg)
-
 # Github Test
 
 Eae Candidato!
@@ -23,4 +21,4 @@ Recomendamos algumas API’s abertas e gratuitas para estes teste, porém isto �
 ## Unsplash
 [Unsplash Image API | Free HD Photo API](https://unsplash.com/developers)
 
-#BuildboxAndroid
+![footer](https://miro.medium.com/max/864/1*gZ9XF80M8yOasLiFUzL07g.png)

@@ -27,4 +27,4 @@ Senha - JhZ5dAPG
 
 [Zeplin](https://app.zeplin.io/login)
 
-![footer](https://miro.medium.com/max/864/1*gZ9XF80M8yOasLiFUzL07g.png)
+![footer](https://miro.medium.com/max/480/1*jA64NTovT-efZ96tcq-X5g.png)

@@ -1,4 +1,4 @@
-APP New API
+<h1>APP New API</h1>
 
 Aplicativo que consome uma API Rest do New York Times e exibe as notícias em uma lista de dados (Recycler View).
 

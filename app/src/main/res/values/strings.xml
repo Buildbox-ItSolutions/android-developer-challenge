@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">SobreCarros</string>
+    <string name="title_activity_inform_carro">InformCarro</string>
+</resources>

@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">IMDb Movie Listing</string>
+    <string name="box_msg_ok">Ok</string>
+    <string name="msg_no_internet">Tentar Novamente?</string>
+    <string name="canceled">Cancelar</string>
+
+</resources>

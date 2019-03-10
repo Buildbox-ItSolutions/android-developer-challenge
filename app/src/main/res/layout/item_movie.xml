@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="220dp"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        app:cardElevation="3dp"
+        app:cardUseCompatPadding="false"
+        app:cardCornerRadius="10dp"
+        android:clickable="true">
+
+
+    <RelativeLayout
+            android:id="@+id/relative_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#FFFFFF">
+
+        <ImageView
+
+                android:id="@+id/iv_movie"
+                android:layout_width="match_parent"
+                android:layout_height="265dp"
+                android:scaleType="centerCrop"
+                tools:srcCompat="@android:color/darker_gray"/>
+
+        <TextView
+                android:background="@android:color/background_light"
+                android:id="@+id/tv_movie"
+                android:layout_marginTop="190dp"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                android:text="Title"
+                android:textColor="@android:color/background_dark"
+                android:textSize="12sp"
+                android:textAlignment="center"
+                android:layout_alignParentStart="true"/>
+        <TextView
+                android:textColor="@android:color/background_light"
+                android:text="YEAR"
+                android:background="@drawable/screen_border"
+                android:textAlignment="center"
+                android:layout_marginTop="170dp"
+                android:layout_marginLeft="10dp"
+                android:layout_width="58dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_type"
+                android:textAllCaps="true"/>
+
+    </RelativeLayout>
+</androidx.cardview.widget.CardView >

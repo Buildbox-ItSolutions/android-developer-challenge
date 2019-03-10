@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+            android:id="@+id/navigation_movies"
+            android:icon="@drawable/ic_local_movies_black_24dp"
+            android:title="Movies"
+            android:enabled="true"/>
+
+    <item
+            android:id="@+id/navigation_series"
+            android:icon="@drawable/ic_series_black_24dp"
+            android:title="Series"
+            android:enabled="true"/>
+
+    <item
+            android:id="@+id/navigation_favorites"
+            android:icon="@drawable/ic_favorite_black_24dp"
+            android:title="Favorites"
+            android:enabled="true"/>
+
+</menu>

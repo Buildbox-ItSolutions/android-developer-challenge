@@ -3,29 +3,67 @@ package com.example.movies.data
 import com.google.gson.annotations.Expose
 import com.google.gson.annotations.SerializedName
 
-data class Movie
-(
+class Movie {
     @SerializedName("Title")
     @Expose
-    var title: String,
+    private var title: String? = null
 
     @SerializedName("Poster")
     @Expose
-    var poster: String,
+    private var poster: String? = null
 
     @SerializedName("Year")
     @Expose
-    var year: String,
+    private var year: String? = null
 
     @SerializedName("Type")
     @Expose
-    var type: String,
+    private var type: String? = null
 
-    @SerializedName ("imdbID")
+    @SerializedName("imdbID")
     @Expose
-    var  imdbid: String,
+    private var imdbid: String? = null
 
-    @SerializedName ("Plot")
+    @SerializedName("Plot")
     @Expose
-    var plot: String
-)
+    private var plot: String? = null
+
+    fun setTitle(Title: String) {
+        title = Title
+    }
+
+    fun getTitle() = title
+
+
+    fun setPoster(Poster: String) {
+        poster = Poster
+    }
+
+    fun getPoster() = poster
+
+    fun setYear(Year: String) {
+        year = Year
+    }
+
+    fun getYear() = year
+
+    fun setType(Type: String) {
+        type = Type
+    }
+
+    fun getType() = type
+
+    fun setImdbid(Imdbid: String) {
+        imdbid = Imdbid
+    }
+
+    fun getImdbid() = imdbid
+
+    fun setPlot(Plot: String) {
+        plot = Plot
+    }
+
+    fun getPlot() = plot
+
+
+}

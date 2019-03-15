@@ -20,7 +20,7 @@ class Database {
 
             override fun onResponse(call: Call<MovieList>, response: Response<MovieList>) {
                 Log.d("OnResponse","RESPONSE")
-                dataMovieList.postValue(response.body()?.search)
+                dataMovieList.postValue(response.body()?.getSearch())
             }
 
             override fun onFailure(call: Call<MovieList>, t: Throwable) {

@@ -46,13 +46,13 @@ class MovieDetails : Fragment() {
         moviesViewModel.loadMovieDetail(id_recived, "d2e11186")
         moviesViewModel.getMovieDetail().observe(this, Observer {
 
-            tv_title_detail.setText(it.title)
-            tv_movie_plot_detail.setText(it.plot)
-            tv_type_detail.setText(it.type)
-            tv_year_detail.setText(it.year)
+            tv_title_detail.setText(it.getTitle())
+            tv_movie_plot_detail.setText(it.getPlot())
+            tv_type_detail.setText(it.getType())
+            tv_year_detail.setText(it.getYear())
             var downloadImage = DownloadImageWithURLTask(iv_movie_detail)
-            if (it.poster != "N/A")
-                downloadImage.execute(it.poster)
+            if (it.getPoster() != "N/A")
+                downloadImage.execute(it.getPoster())
             else
                 downloadImage.execute("https://t3.ftcdn.net/jpg/01/09/49/08/240_F_109490811_fDzc0dpSLS0TmoNu4WP34aozBcI6FKZl.jpg")
 

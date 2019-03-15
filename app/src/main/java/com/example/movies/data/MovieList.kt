@@ -6,6 +6,12 @@ import com.google.gson.annotations.SerializedName
 class MovieList {
     @SerializedName("Search")
     @Expose
-    var search: List<Movie>? = null
+    private var search: List<Movie>? = null
+
+    fun setSearch(Search: List<Movie>){
+        search = Search
+    }
+
+    fun getSearch() = search
 
 }

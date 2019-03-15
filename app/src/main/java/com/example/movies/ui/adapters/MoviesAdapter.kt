@@ -18,12 +18,12 @@ class MoviesViewHolder(val view: View): RecyclerView.ViewHolder(view){
     fun bindView(item: Movie){
     with(view){
         var downloadImage = DownloadImageWithURLTask(iv_movie)
-        if (item.poster != "N/A")
-        downloadImage.execute(item.poster)
+        if (item.getPoster() != "N/A")
+        downloadImage.execute(item.getPoster())
         else
         downloadImage.execute("https://t3.ftcdn.net/jpg/01/09/49/08/240_F_109490811_fDzc0dpSLS0TmoNu4WP34aozBcI6FKZl.jpg")
-        tv_movie.text = item.title
-        tv_type.text = item.type
+        tv_movie.text = item.getTitle()
+        tv_type.text = item.getType()
 
 
     }
@@ -42,7 +42,7 @@ class MoviesAdapter(val data: MutableList<Movie> = mutableListOf()): RecyclerVie
         holder.bindView(data[position])
         holder.view.setOnClickListener() {
             val bundle = Bundle()
-            bundle.putString("imdbid_recived", data[position].imdbid)
+            bundle.putString("imdbid_recived", data[position].getImdbid())
             val movieDetails =  MovieDetails()
             movieDetails.arguments = bundle
             val activity = it.context as AppCompatActivity

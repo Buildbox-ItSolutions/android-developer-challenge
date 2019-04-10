@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Android Developer Challenge</string>
+
+    <string-array name="types">
+        <item>Movie</item>
+        <item>Series</item>
+        <item>Episode</item>
+    </string-array>
+
+</resources>

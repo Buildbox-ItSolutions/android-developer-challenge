@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!--Busrca-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#12000000"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif"
+                android:text="Buscar por:"
+                android:textColor="#000"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <RadioGroup
+                android:id="@+id/radioGroup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/rdTitulo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:padding="5dp"
+                    android:text="Título"
+                    android:textSize="14sp" />
+
+                <RadioButton
+                    android:id="@+id/rdNomeTipo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:text="Título+Tipo"
+                    android:textSize="14sp" />
+
+                <RadioButton
+                    android:id="@+id/radioFemale"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:text="Título+Ano"
+                    android:textSize="14sp" />
+
+            </RadioGroup>
+
+            <!--Titulo-->
+            <LinearLayout
+                android:id="@+id/llTitulo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/etT_titulo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Titulo" />
+
+            </LinearLayout>
+
+            <!--Titulo + Tipo -->
+            <LinearLayout
+                android:id="@+id/llTituloTipo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <EditText
+                    android:id="@+id/etTT_titulo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Titulo"
+                    android:importantForAutofill="no"
+                    android:inputType="text"
+                    tools:ignore="HardcodedText,UnusedAttribute" />
+
+                <Spinner
+                    android:id="@+id/spnTT_tipo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/spinner_bg"
+                    android:drawSelectorOnTop="true"
+                    android:entries="@array/types"
+                    android:paddingStart="5dp"
+                    android:paddingTop="7dp"
+                    android:paddingBottom="7dp"
+                    android:popupElevation="3dp"
+                    android:spinnerMode="dropdown" />
+
+            </LinearLayout>
+
+            <!--Titulo + Ano-->
+            <LinearLayout
+                android:id="@+id/llTituloAno"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <EditText
+                    android:id="@+id/etTA_titulo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Titulo"
+                    android:importantForAutofill="no"
+                    android:inputType="text"
+                    tools:ignore="HardcodedText,UnusedAttribute" />
+
+                <EditText
+                    android:id="@+id/etTA_ano"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Ano"
+                    android:importantForAutofill="no"
+                    android:inputType="number"
+                    tools:ignore="HardcodedText,UnusedAttribute" />
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btn_Buscar"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_gravity="end"
+                android:layout_margin="5dp"
+                android:background="@color/colorPrimary"
+                android:text="BUSCAR"
+                android:textColor="#fff" />
+
+        </LinearLayout>
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyle"
+            android:layout_marginTop="30dp"
+            android:visibility="gone"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvResultsCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="7dp" />
+
+            <GridView
+                android:id="@+id/gridview"
+                android:layout_width="match_parent"
+                android:layout_height="800dp"
+                android:columnWidth="190dp"
+                android:gravity="center"
+                android:horizontalSpacing="5dp"
+                android:nestedScrollingEnabled="true"
+                android:numColumns="2"
+                android:stretchMode="spacingWidthUniform"
+                android:verticalSpacing="5dp" />
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:id="@+id/btn_inicio"
+                    android:layout_width="60dp"
+                    android:layout_height="40dp"
+                    android:layout_margin="10dp"
+                    android:layout_alignParentStart="true"
+                    android:background="@color/colorPrimary"
+                    android:text="INICIO"
+                    android:textColor="#fff"
+                    android:textSize="12sp"
+                    android:visibility="invisible"
+                    tools:ignore="HardcodedText" />
+
+                <TextView
+                    android:id="@+id/tvPagination"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@id/btn_inicio"
+                    android:layout_centerVertical="true"
+                    android:textSize="13sp"
+                    android:visibility="invisible"/>
+
+                <Button
+                    android:id="@+id/btn_previous"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_toStartOf="@id/btn_next"
+                    android:background="@color/colorPrimary"
+                    android:paddingLeft="4dp"
+                    android:paddingRight="4dp"
+                    android:text="Anterior"
+                    android:textColor="#fff"
+                    android:textSize="12sp"
+                    android:visibility="invisible"
+                    tools:ignore="HardcodedText" />
+
+                <Button
+                    android:id="@+id/btn_next"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_margin="10dp"
+                    android:background="@color/colorPrimary"
+                    android:paddingLeft="4dp"
+                    android:paddingRight="4dp"
+                    android:text="Próximo"
+                    android:textColor="#fff"
+                    android:textSize="12sp"
+                    android:visibility="invisible"
+                    tools:ignore="HardcodedText" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</ScrollView>
+

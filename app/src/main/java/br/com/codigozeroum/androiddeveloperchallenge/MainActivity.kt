@@ -67,6 +67,8 @@ class MainActivity : AppCompatActivity() {
 
         btn_Buscar.setOnClickListener {v: View ->
 
+
+
             if(this.isNetworkAvailable()){
 
                 this.showOrDismissLoading()
@@ -151,6 +153,11 @@ class MainActivity : AppCompatActivity() {
 
     fun searchTitulo(titulo: String, page: Int){
 
+        if(titulo == ""){
+            Toast.makeText(this@MainActivity, "Necessário Inserir um Valor para Busca", Toast.LENGTH_LONG).show()
+            return
+        }
+
         tituloPerquisa = titulo
         pageAtual = page
         val call = RetrofitInitializer().searchTitleService().searchMoviesTitle(titulo, page, apikey)
@@ -158,6 +165,11 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun searchTituloTipo(titulo: String, tipo: String, page: Int){
+
+        if(titulo == ""){
+            Toast.makeText(this@MainActivity, "Necessário Inserir um Valor para Busca", Toast.LENGTH_LONG).show()
+            return
+        }
 
         tituloPerquisa = titulo
         tipoPesquisa = tipo
@@ -167,6 +179,11 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun searchTituloAno(titulo: String, ano: String, page: Int){
+
+        if(titulo == "" || ano == ""){
+            Toast.makeText(this@MainActivity, "Necessário Inserir um Valor em todos os campos para Busca", Toast.LENGTH_LONG).show()
+            return
+        }
 
         tituloPerquisa = titulo
         anoPesquisa = ano

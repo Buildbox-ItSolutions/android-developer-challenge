@@ -1,30 +1,29 @@
-# Github Test
+# Movies App
 
-Eae Candidato!
+This app allows you to view a list of movies, series, and favorites, and view more details of each item
 
-Este desafio consiste em identificar seu nível de conforto com desenvolvimento para Android, portanto esperamos que você tente resolve-lo usando toda a sua capacidade e conhecimento da tecnologia. 
+# Omdb API
 
-O Desafio Android é o seguinte:
+The queries and requests were made using the Omdb API
+http://www.omdbapi.com/
 
-Monte um aplicativo para Android, utilizando Java ou Kotlin (Escolha qualquer um não faz diferença), que consuma uma API REST e mostre uma lista de dados, ao clicar em um dos itens desta lista, uma segunda tela é mostrada contendo mais informações sobre aquele item.
+# Tools, Components and Architecture used
 
-Tente colocar ao máximo todos os recursos técnicos que você conhece, quando se trata de padrão de arquitetura, boas práticas de código, novas bibliotecas nativas do Android etc. Mas não se esqueça que nosso grande e querido usuário não vê as rotinas assíncronas majestosas que todos nós escrevemos, sendo assim, tente criar uma interface bem legal, objetiva e agradável. Colocamos também um link para um repositório no Zeplin contendo uma sugestão de interface.
+BottomNavigationView
+https://developer.android.com/reference/android/support/design/widget/BottomNavigationView
 
-Você deve fazer um Fork deste repositório e solicitar um Pull Request, com seu nome completo na descrição, para nossa avaliação.
+CardView
+https://developer.android.com/guide/topics/ui/layout/cardview
 
-Recomendamos algumas API’s abertas e gratuitas para estes teste, porém isto é apenas uma recomendação, se sinta livre para fazer outra escolha e nos surpreender ;).
+CollapsingToolbar
+https://material.io/develop/android/components/collapsing-toolbar-layout/
 
-# API’s 
-## The Open Movie Database
- [OMDb API - The Open Movie Database](http://www.omdbapi.com/)
 
-## Unsplash
-[Unsplash Image API | Free HD Photo API](https://unsplash.com/developers)
+RecyclerView
+https://developer.android.com/guide/topics/ui/layout/recyclerview
 
-# Design - Zeplin
-E-mail - buildbox.mobileguest@gmail.com
-Senha - JhZ5dAPG
+Retrofit
+https://square.github.io/retrofit/
 
-[Zeplin](https://app.zeplin.io/login)
-
-![footer](https://miro.medium.com/max/480/1*jA64NTovT-efZ96tcq-X5g.png)
+MVVM
+https://medium.com/brq-techblog/android-mvvm-e-databinding-fd4595e271c9
